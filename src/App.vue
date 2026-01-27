@@ -42,6 +42,10 @@ const closeMenu = () => {
   </header>
 
   <RouterView />
+
+  <footer>
+    @JonasVanKerkhove
+  </footer>
 </template>
 
 <style scoped>
@@ -216,5 +220,13 @@ nav a {
 
 nav a:first-of-type {
   border: 0;
+}
+footer{
+  padding: 2rem;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 </style>
