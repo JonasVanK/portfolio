@@ -18,6 +18,7 @@ export const useProjectsStore = defineStore("projects", () => {
         "GraphQL",
         "MySQL",
       ],
+      gitUrl: null,
     },
     {
       title: "Mobile Fitness Tracker",
@@ -26,6 +27,7 @@ export const useProjectsStore = defineStore("projects", () => {
       description:
         "Een mobiele applicatie voor het bijhouden van workouts en voortgang. De app synchroniseert data met een backend en toont statistieken in een overzichtelijk dashboard.",
       technologies: ["React Native", "JavaScript", "ASP.NET", ".NET", "SQL"],
+      gitUrl: null,
     },
   ];
 
