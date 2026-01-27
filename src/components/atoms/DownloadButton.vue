@@ -4,7 +4,7 @@
 </script>
 
 <template>
-    <a href="/files/cv_Jonas_Van_Kerkhove.pdf" download>
+    <a href="./files/cv_Jonas_Van_Kerkhove.pdf" download>
         <button>Download my cv</button>
     </a>
     
