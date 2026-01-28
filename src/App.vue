@@ -57,7 +57,9 @@ header {
   justify-content: space-between;
   position: sticky;
   top: 0;
-  background-color: #1f1f1f;
+  background-color: #2f2f3ba9;
+  backdrop-filter: blur(.2rem);
+  z-index: 1;
 }
 
 .logoWrapper {
