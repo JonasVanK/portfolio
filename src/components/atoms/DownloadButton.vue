@@ -9,19 +9,20 @@
     
 </template>
 <style lang="scss" scoped>
-span {
-    background-color: gray;
-    padding: .1rem .6rem;
-    border-radius: .5rem;
-
-    p {
-        margin: 0;
-        padding: 0;
-        font-size: small;
-        color: white;
-        font-weight: 500;
-
-    }
-
+button {
+  border: 2px solid;
+  border-color: transparent;
+  background-color: #00ADFF;
+  color: #1f1f1f;
+  border-radius: 0;
+  padding: .2rem 1rem;
+  transition: .3s;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: .5rem;
+}
+button:hover{
+    scale: 1.05;
+    background-color: #2dbcff;
 }
 </style>
