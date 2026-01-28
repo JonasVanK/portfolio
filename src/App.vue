@@ -33,8 +33,7 @@ const closeMenu = () => {
 
     <div class="wrapper" :class="{ open: menuOpen }">
       <nav>
-        <RouterLink @click="closeMenu()" class="link" active-class="activeTab" exact-active-class="ActiveTab" to="/">
-          Home</RouterLink>
+        <RouterLink @click="closeMenu()" class="link" active-class="activeTab" exact-active-class="ActiveTab" to="/">Home</RouterLink>
         <RouterLink @click="closeMenu()" class="link" active-class="activeTab" exact-active-class="ActiveTab"
           to="/about">About</RouterLink>
       </nav>
@@ -220,9 +219,6 @@ nav a {
   border-left: 1px solid var(--color-border);
 }
 
-nav a:first-of-type {
-  border: 0;
-}
 footer{
   padding: 2rem;
   color: white;
