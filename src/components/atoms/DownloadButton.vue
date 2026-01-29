@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <a href="`${baseUrl}files/cv_Jonas_Van_Kerkhove.pdf`" download>
+    <a :href="`${baseUrl}files/cv_Jonas_Van_Kerkhove.pdf`" download>
         <button>Download my cv</button>
     </a>
     
