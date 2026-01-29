@@ -62,7 +62,7 @@ const aboutMe : textBlock = {
 div {
   display: flex;
   justify-content: center;
-  margin-left: 2rem;
+  margin-left: 1rem;
   margin-top: 1rem;
 }
 </style>

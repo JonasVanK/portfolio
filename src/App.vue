@@ -15,50 +15,88 @@ const closeMenu = () => {
 
 <template>
   <header>
-    <div class="logoWrapper">
+    <div>
+      <div class="logoWrapper">
 
-      <RouterLink @click="closeMenu()" class="logo" to="/">
-        <img src="@/assets/home.svg" alt="Home Logo" />
-      </RouterLink>
-      <button class="hamburger" @click="toggleMenu" :aria-expanded="menuOpen" aria-label="Toggle navigation menu">
-        <p>Menu</p>
-        <div>
-          <span :class="{ open: menuOpen }"></span>
-          <span :class="{ open: menuOpen }"></span>
-          <span :class="{ open: menuOpen }"></span>
-        </div>
-      </button>
-    </div>
+        <RouterLink @click="closeMenu()" class="logo" to="/">
+          <img src="@/assets/home.svg" alt="Home Logo" />
+        </RouterLink>
+        <button class="hamburger" @click="toggleMenu" :aria-expanded="menuOpen" aria-label="Toggle navigation menu">
+          <p>Menu</p>
+          <div>
+            <span :class="{ open: menuOpen }"></span>
+            <span :class="{ open: menuOpen }"></span>
+            <span :class="{ open: menuOpen }"></span>
+          </div>
+        </button>
+      </div>
 
 
-    <div class="wrapper" :class="{ open: menuOpen }">
-      <nav>
-        <RouterLink @click="closeMenu()" class="link" active-class="activeTab" exact-active-class="ActiveTab" to="/">Home</RouterLink>
-        <RouterLink @click="closeMenu()" class="link" active-class="activeTab" exact-active-class="ActiveTab"
-          to="/about">About</RouterLink>
-      </nav>
+      <div class="wrapper" :class="{ open: menuOpen }">
+        <nav>
+          <RouterLink @click="closeMenu()" class="link" active-class="activeTab" exact-active-class="ActiveTab" to="/">
+            Home</RouterLink>
+          <RouterLink @click="closeMenu()" class="link" active-class="activeTab" exact-active-class="ActiveTab"
+            to="/about">About</RouterLink>
+        </nav>
+      </div>
     </div>
   </header>
+  <div class="container">
+    <RouterView />
+  </div>
 
-  <RouterView />
 
   <footer>
-    @JonasVanKerkhove
+    <div>
+      @JonasVanKerkhove
+    </div>
   </footer>
 </template>
 
 <style scoped>
-header {
+header>div,
+footer>div {
   line-height: 1.5;
   max-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: sticky;
-  top: 0;
-  background-color: #2f2f3ba9;
-  backdrop-filter: blur(.2rem);
+  max-width: 60rem;
   z-index: 1;
+  width: 100%;
+  backdrop-filter: blur(.2rem);
+}
+
+
+.container {
+  max-width: 60rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-self: center;
+  min-height: 100vh;
+  backdrop-filter: blur(.2rem);
+  padding: 5rem 1rem;
+  border: none;
+  box-shadow: none;
+}
+
+header,
+footer {
+  background-color: #1f1f1f;
+  top: 0;
+  position: sticky;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  z-index: 1;
+}
+
+header {
+  position: fixed;
+  width: 100%;
 }
 
 .logoWrapper {
@@ -151,11 +189,13 @@ nav {
 .wrapper {
   max-height: 0;
   overflow: hidden;
+  margin-left: -100vw;
   transition: cubic-bezier(0.37, 0.24, 0.39, 1.03) .6s;
 }
 
 .wrapper.open {
   max-height: 5rem;
+  margin-left: 0;
 }
 
 .hamburger span.open:nth-child(2) {
@@ -171,7 +211,7 @@ nav {
 }
 
 @media (min-width: 500px) {
-  header {
+  header>div {
     flex-direction: row;
   }
 
@@ -203,6 +243,18 @@ nav {
     overflow: auto;
     align-content: center;
   }
+
+  header,
+  footer {
+    background-color: #1f1f1fc6;
+  }
+}
+
+@media (min-width: 65rem) {
+  .container {
+    border: 2px solid #1f1f1f;
+    box-shadow: white 0 0 1rem;
+  }
 }
 
 nav a.router-link-exact-active {
@@ -219,12 +271,8 @@ nav a {
   border-left: 1px solid var(--color-border);
 }
 
-footer{
-  padding: 2rem;
-  color: white;
-  display: flex;
-  flex-direction: row;
+footer {
+  padding: 1rem;
   justify-content: center;
-  align-items: center;
 }
 </style>

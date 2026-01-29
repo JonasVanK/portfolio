@@ -22,7 +22,7 @@ import DownloadButton from '../atoms/DownloadButton.vue';
     flex-direction: column;
     flex-wrap: nowrap;
     margin-right: 2rem;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .imageContainer {
