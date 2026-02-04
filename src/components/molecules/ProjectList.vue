@@ -1,18 +1,15 @@
 <script setup lang="ts">
-import type { project } from '@/types/project';
-import HighlightedItem from '../atoms/HighlightedItem.vue';
 import { useProjectsStore } from '@/stores/projects';
 
 const projectStore = useProjectsStore();
-
-const projects : project[] = projectStore.projects
+projectStore.loadProjects();
 
 </script>
 
 <template>
     <div>
         <ul>
-            <li v-for="project in projects">
+            <li v-for="project in projectStore.projects">
                 <p>{{ project.title }}</p>
             </li>
         </ul>
