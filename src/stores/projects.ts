@@ -48,6 +48,7 @@ export const useProjectsStore = defineStore("projects", () => {
       const url = `${baseUrl}files/projects.json`
       projects.value = await readProjects(url);
       loaded.value = true
+      console.log(projects)
     }
     catch{
       projects.value = backupProjects

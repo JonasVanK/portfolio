@@ -36,8 +36,8 @@ const closeMenu = () => {
         <nav>
           <RouterLink @click="closeMenu()" class="link" active-class="activeTab" exact-active-class="ActiveTab" to="/">
             Home</RouterLink>
-          <RouterLink @click="closeMenu()" class="link" active-class="activeTab" exact-active-class="ActiveTab"
-            to="/about">About</RouterLink>
+          <!-- <RouterLink @click="closeMenu()" class="link" active-class="activeTab" exact-active-class="ActiveTab"
+            to="/about">About</RouterLink> -->
         </nav>
       </div>
     </div>
@@ -163,6 +163,7 @@ header {
   border: none;
   background: none;
   width: 2rem;
+  margin-left: 2rem;
 }
 
 .logo img {
@@ -182,6 +183,7 @@ nav {
   font-size: 12px;
   text-align: center;
   display: flex;
+  padding: 0 2rem;
   gap: 0;
   flex-direction: column;
 }

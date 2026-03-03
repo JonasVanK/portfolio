@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useProjectsStore } from '@/stores/projects';
+import ProjectCard from '../atoms/ProjectCard.vue';
 
 const projectStore = useProjectsStore();
 projectStore.loadProjects();
@@ -8,9 +9,10 @@ projectStore.loadProjects();
 
 <template>
     <div>
+        <h2>My projects</h2>
         <ul>
             <li v-for="project in projectStore.projects">
-                <p>{{ project.title }}</p>
+                <ProjectCard :project="project"></ProjectCard>
             </li>
         </ul>
     </div>
@@ -28,9 +30,10 @@ div {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
         padding: 0;
         margin: 0;
-        gap: .5rem;
 
         li {
             display: inherit;
