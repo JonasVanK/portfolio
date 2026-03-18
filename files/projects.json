@@ -4,7 +4,7 @@
     "image": "/projectImages/freefall_simulator.png",
     "date": "2024-01-27",
     "inProgress": false,
-    "description": "Een realistische skydiving simulatie waarin natuurkundige principes zoals zwaartekracht en snelheid centraal staan.",
+    "description": "A realistic skydiving simulation in which physical principles such as gravity and velocity play a central role. The project focuses on accurately modeling motion and forces to create an immersive and lifelike experience.",
     "technologies": [
       "C#",
       ".Net",
@@ -17,7 +17,7 @@
     "image": "/projectImages/minecolonies_automation.png",
     "date": "2023-11-15",
     "inProgress": false,
-    "description": "het C# programma voor mineColonies, een minecraft mod, te automatiseren.",
+    "description": "This project is a C# application designed to automate gameplay elements of MineColonies, a mod for Minecraft. It interacts with the game to streamline colony management tasks, reducing manual input and improving efficiency. The program focuses on automating repetitive processes, allowing players to manage their colony more effectively and with less effort.",
     "technologies": [
       "C#",
       ".Net",
@@ -30,11 +30,23 @@
     "image": "/projectImages/chess_clone.png",
     "date": "2026-02-19",
     "inProgress": true,
-    "description": "Een clone van schaken in .Net",
+    "description": "A clone of checkers in .Net",
     "technologies": [
       ".Net",
       "Wpf"
     ],
     "gitUrl": "https://github.com/JonasVanK/ChessClone"
+  },
+  {
+    "title": "Circular waveform",
+    "image": "/projectImages/circular_waveform.png",
+    "date": "2024-11-19",
+    "inProgress": false,
+    "description": "This project creates a real-time circular visualization of sound using a polar waveform representation. Audio input is analyzed and mapped onto a circular coordinate system, where amplitude controls the distance from the center and time is distributed around the circle. The result is a dynamic, visually engaging pattern that responds to music or live audio, similar to a circular oscilloscope or a Lissajous figure when using stereo signals.",
+    "technologies": [
+      ".Net",
+      "Wpf"
+    ],
+    "gitUrl": "https://github.com/JonasVanK/circular-waveform"
   }
 ]
